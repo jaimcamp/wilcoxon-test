@@ -1,4 +1,4 @@
-#Wilcoxon Signed-rank test
+# Wilcoxon Signed-rank test
 
 This project is an implementation of Wilcoxon signed-rank test.
 
@@ -11,24 +11,28 @@ Note that you must use Linux system to use this repository and it has been teste
 
 The repository contains a number of folders.
 
-##WilcoxonTestLibrary
+## WilcoxonTestLibrary
 Implementation of the wilcoxon test shared library. Since this is a shared library, not an executable, you cannot run it. However, you can install (and create new) interfaces for it, some of which are available in this project. The library can be installed by going to the folder and running:
+
 ```
 >make install
 ```
 
 After installing, you can run tests of the project with the command:
+
 ```
 >make test
 >./runTests
 ```
 
 To get verbose output, use the command:
+
 ```
 >./runTests -v
 ```
 
-##RcppWilcoxonTest
+## RcppWilcoxonTest
+
 An interface that connects the implementation of the optimized Wilcoxon algorithm to the R.
 Note that you must have installed the implementation to use it.
 
@@ -41,6 +45,7 @@ $install.packages("Rcpp")
 ```
 
 After that, the R wilcoxon package can be installed by navigating to the package folder in the terminal and running the command:
+
 
 ```
 $R CMD INSTALL .
@@ -58,7 +63,7 @@ you can invoke the function by calling:
 >RcppWilcoxonTest::WilxTest(dataMatrix, dataXsize, dataYsize, testIndexes, controlIndexes)
 ```
 
-##TerminalWilcoxonTest
+## TerminalWilcoxonTest
 An interface that connects the implementation Wilcoxon library to the terminal.
 
 Note that you must have installed the implementation to use it.
@@ -77,20 +82,25 @@ $WilcoxonTest --help
 
 for further help. Currently only supports NetCDF file as input data.
 
-##WilcoxonVTable
+## WilcoxonVTable
+
 Python program that can calculate V and P tables, print them, create files of the tables and create a number of graphs on the tables. These methods were mostly made for caulculations and research and are not structured very well, nor meant to be used publicly. Use them at your own risk.
 
 If you want to run tests, use the following command in the ```test``` folder
+
 ```
 python3 -m unittest discover . '*Test.py'
 ```
 
-##Seminar_paper
+## Seminar_paper
 The folder that contains this paper and all images attached to it. It also contains R programs to create those images.
 
 For any suggestions, send me a message.
 
-#Troubleshooting
+# Troubleshooting
+
 If R cant run it - make sure that you have the latest version of R and Rcpp installed.
 
 In case of any errors, contact me directly.
+
+
